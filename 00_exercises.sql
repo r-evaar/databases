@@ -115,7 +115,6 @@ What is the average income between the ages of 20 and 50? (Including 20 and 50)
 * Question: How many people's name start with A and end with R?
 * Expected output: 1846
 */
-
 -- SELECT count( * ) from public.employees WHERE first_name ILIKE 'a%r'
 
 /*
@@ -124,7 +123,6 @@ What is the average income between the ages of 20 and 50? (Including 20 and 50)
 * Question: How many people's zipcode have a 2 in it?.
 * Expected output: 4211 
 */
-
 -- SELECT count( * ) from public.customers where zip::text like '%2%';
 
 
@@ -134,7 +132,6 @@ What is the average income between the ages of 20 and 50? (Including 20 and 50)
 * Question: How many people's zipcode start with 2 with the 3rd character being a 1.
 * Expected output: 109 
 */
-
 -- select count(*) from public.customers where zip::text like '2_1%';
 
 /*
@@ -144,7 +141,6 @@ What is the average income between the ages of 20 and 50? (Including 20 and 50)
 * Replace null values with "No State"                                                  
 * Expected output: https://imgur.com/AVe6G4c
 */
-
 -- select COALESCE(state, 'No State') as "State" from public.customers where phone::text like '302%'
 
 -------------------------------------------------
@@ -197,6 +193,6 @@ What is the average income between the ages of 20 and 50? (Including 20 and 50)
 * Question: How many orders were made in January 2004?
 */
 
-SELECT count(*) 
-FROM public.orders
-WHERE date_trunc('month', orderdate) = date '2004/01/01';
+-- SELECT count(*) 
+-- FROM public.orders
+-- where date_trunc('month', orderdate) = date '2004/01/01';
